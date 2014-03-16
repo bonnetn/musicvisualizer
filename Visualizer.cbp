@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="Visualizer" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="Debug">
+				<Option output="bin/Debug/Visualizer" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Debug/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-g" />
+				</Compiler>
+			</Target>
+			<Target title="Release">
+				<Option output="bin/Release/Visualizer" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Release/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-O2" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+				</Linker>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="-Wall" />
+			<Add directory="../SDL-1.2.15/include" />
+			<Add directory="../kiss_fft130" />
+		</Compiler>
+		<Linker>
+			<Add library="mingw32" />
+			<Add library="SDLmain" />
+			<Add library="SDL.dll" />
+			<Add library="user32" />
+			<Add library="gdi32" />
+			<Add library="winmm" />
+			<Add library="dxguid" />
+			<Add directory="../SDL-1.2.15/lib" />
+		</Linker>
+		<Unit filename="audio/musicdecomposer.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="audio/musicdecomposer.h" />
+		<Unit filename="bar/bar.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="bar/bar.h" />
+		<Unit filename="kiss_fft130/_kiss_fft_guts.h" />
+		<Unit filename="kiss_fft130/kiss_fft.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="kiss_fft130/kiss_fft.h" />
+		<Unit filename="kiss_fft130/kissfft.hh" />
+		<Unit filename="main.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Extensions>
+			<code_completion />
+			<envvars />
+			<debugger />
+			<lib_finder disable_auto="1" />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>
